@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "lerna": "2.0.0-beta.20"
+  },
+  "scripts": {
+    "start": "",
+    "build": "",
+    "test": "lerna run test"
+  }
+}
