@@ -1,8 +1,10 @@
 # Clean architecture for Frontend
 
-A simple project to test the possibility of application of clean architecture for frontend.
+A simple project to test the possibility of application of [Onion Architecture](https://dzone.com/articles/onion-architecture-is-interesting) for frontend.
 
 [Lerna](https://lerna.js.org/) is considered as library to manage multiple packages.
+
+In this project ```React Js``` will be used as Frontend framework.
 
 ---
 
@@ -30,19 +32,20 @@ Run ```npm run test``` in project's root folder.
 
 ### 4. Start (for dev)
 
-Run ```npm run start``` in project's root folder.
+Run ```npm run start``` in project's root folder (it takes some minutes to build, test and start app).
+If your browser can not open your application automatically, you can access your application in ```localhost:3000```.
 
 The deploy stage includes already build and test stage
  (no need to execute ```npm run build``` or ```npm run test```).
 
 ---
 
-### 5. Deploy as prod in localhost
+### 5. Deploy as prod in localhost (optional)
 
 After successfully executing either ```npm run build``` or ```npm run start```
 the ```./packages/infrastructure/UI/build``` is ready to be deployed as prod.
  
-To deploy this build in local, please follow these steps:
+To deploy this ```build``` folder in local, please follow these steps:
 
 - Create a project: ```mkdir express-app-for-test-build-file```
 - Create ```index.js``` file inside this project ```./express-app-for-test-build-file``` with following content
