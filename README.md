@@ -13,6 +13,7 @@ Pre-installation of ```node``` and ```npm```.
 ---
 
 ### 2. Build
+
 Install all packages: ```npm run build``` in project's root folder.
 
 ---
@@ -31,3 +32,54 @@ Run ```npm run start``` in project's root folder.
 
 The deploy stage includes already build and test stage
  (no need to execute ```npm run build``` or ```npm run test```).
+
+---
+
+### 5. Deploy as prod in localhost
+
+After executing either ```npm run build``` or ```npm run start```
+the ```./packages/infrastructure/UI/build``` is ready to be deployed as prod.
+ 
+To deploy this build in local, please follow these steps:
+
+- Create a project: ```mkdir express-app-for-test-build-file```
+- Create ```index.js``` file inside this project ```express-app-for-test-build-file``` with following content
+
+```
+const express = require('express');
+const path = require('path');
+const app = express();
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.listen(9000);
+```
+
+- Create ```package.json``` file inside this project ```express-app-for-test-build-file``` with following content
+
+```
+{
+  "description": "copy and paste/replace build folder in this project's root and run npm run start",
+  "devDependencies": {
+    "express": "4.17.1",
+    "path": "0.12.7"
+  },
+  "scripts": {
+    "start": "npm install && node index.js"
+  }
+}
+```
+
+- Copy the ```build``` folder inside this project ```express-app-for-test-build-file```.
+The project structure will look like:
+
+```
+./express-app-for-test-build-file
+    build
+    index.js
+    package.json
+```
+
+- Run ```npm run start``` command inside this project ```express-app-for-test-build-file``` to deploy the build file.
+Your application will run in ```localhost:9000/```
