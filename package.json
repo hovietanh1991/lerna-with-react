@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "lerna": "2.0.0-beta.20"
+    "lerna": "3.19.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/lerna --help",
+    "start": "./node_modules/.bin/lerna run start",
     "build": "./node_modules/.bin/lerna bootstrap",
     "test": "./node_modules/.bin/lerna run test"
   }

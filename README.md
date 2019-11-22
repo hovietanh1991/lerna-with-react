@@ -13,20 +13,17 @@ Pre-installation of ```node``` and ```npm```.
 ---
 
 ### 2. Installation
-
-Install Lerna as global package: ```npm install lerna -g```.
-
 Install all packages: ```npm install``` in project's root folder.
 
 Link together local packages and npm install remaining package dependencies: 
-```lerna bootstrap``` in project's root folder.
+```npm run build``` in project's root folder.
 
 
 ---
 
 ### 3. TEST
 
-Run ```lerna run test``` or ```npm run test``` in project's root folder.
+Run ```npm run test``` in project's root folder.
 
 ---
 

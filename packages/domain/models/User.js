@@ -1,8 +1,8 @@
-class User {
-  static counter = 0;
+let counter = 0;
 
+class User {
   constructor(name) {
-    this.id = ++User.counter;
+    this.id = ++counter;
     this.name = name;
   }
 }
