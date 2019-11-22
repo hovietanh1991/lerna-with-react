@@ -1,0 +1,35 @@
+{
+  "name": "UI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.jsx",
+  "directories": {
+    "test": "../test"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/react-scripts start",
+    "build": "./node_modules/.bin/react-scripts build",
+    "test": "./node_modules/.bin/react-scripts test --watchAll=false",
+    "eject": "./node_modules/.bin/react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

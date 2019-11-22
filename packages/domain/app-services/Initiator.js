@@ -7,11 +7,7 @@ class UserInitiator {
   }
 }
 
-
 const userInitiator = new UserInitiator();
-
-//userInitiator.loadUserFromServer();
-//console.log(JSON.stringify(userService.userList));
 
 module.exports = {
   userInitiator
