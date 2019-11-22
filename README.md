@@ -8,13 +8,15 @@ A simple project to test the possibility of application of clean architecture fo
 
 ### 1. Prerequisites
 
-Pre-installation of ```node``` and ```npm```.
+Pre-installation of ```node``` and ```npm```. (What I used: ```node v12.13.0``` and ```npm 6.12.0```)
 
 ---
 
 ### 2. Build
 
 Install all packages: ```npm run build``` in project's root folder.
+
+If you want to deploy as prod, please feel free to jump into section 5.
 
 ---
 
@@ -37,13 +39,13 @@ The deploy stage includes already build and test stage
 
 ### 5. Deploy as prod in localhost
 
-After executing either ```npm run build``` or ```npm run start```
+After successfully executing either ```npm run build``` or ```npm run start```
 the ```./packages/infrastructure/UI/build``` is ready to be deployed as prod.
  
 To deploy this build in local, please follow these steps:
 
 - Create a project: ```mkdir express-app-for-test-build-file```
-- Create ```index.js``` file inside this project ```express-app-for-test-build-file``` with following content
+- Create ```index.js``` file inside this project ```./express-app-for-test-build-file``` with following content
 
 ```
 const express = require('express');
@@ -56,7 +58,7 @@ app.get('/', function(req, res) {
 app.listen(9000);
 ```
 
-- Create ```package.json``` file inside this project ```express-app-for-test-build-file``` with following content
+- Create ```package.json``` file inside this project ```./express-app-for-test-build-file``` with following content
 
 ```
 {
@@ -71,7 +73,7 @@ app.listen(9000);
 }
 ```
 
-- Copy the ```build``` folder inside this project ```express-app-for-test-build-file```.
+- Copy the ```build``` folder inside this project ```./express-app-for-test-build-file```.
 The project structure will look like:
 
 ```
@@ -81,5 +83,5 @@ The project structure will look like:
     package.json
 ```
 
-- Run ```npm run start``` command inside this project ```express-app-for-test-build-file``` to deploy the build file.
+- Run ```npm run start``` command inside this project ```./express-app-for-test-build-file``` to deploy the ```build``` folder.
 Your application will run in ```localhost:9000/```
