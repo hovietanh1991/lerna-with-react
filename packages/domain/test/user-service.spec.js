@@ -11,24 +11,26 @@ describe('Test user service', () => {
   });
 
   after(() => {
-
+    // some tear down logic here (if needed)
   });
 
   it('Test adding user function of user service', async () => {
     expect(userService).not.to.be.undefined;
     expect(userService.userList.length).to.be.equal(2);
-    expect(userService.userList[0].id).to.be.equal(1);
-    expect(userService.userList[1].id).to.be.equal(2);
-    expect(userService.userList[0].name).to.be.equal(testData[0]);
-    expect(userService.userList[1].name).to.be.equal(testData[1]);
+
+    for(let i = 0; i < testData.length; i++) {
+      expect(userService.userList[i].id).to.be.equal(i + 1);
+      expect(userService.userList[i].name).to.be.equal(testData[i]);
+    }
   });
 
-  it('Test getting user function of user service', async () => {
+  it('Test getting user by id function of user service', async () => {
     expect(userService).not.to.be.undefined;
     expect(userService.userList.length).to.be.equal(2);
-    expect(userService.getUserById(1)).not.to.be.undefined;
-    expect(userService.getUserById(1).name).to.be.equal(testData[0]);
-    expect(userService.getUserById(2)).not.to.be.undefined;
-    expect(userService.getUserById(2).name).to.be.equal(testData[1]);
+
+    for(let i = 0; i < testData.length; i++) {
+      expect(userService.getUserById(i + 1)).not.to.be.undefined;
+      expect(userService.getUserById(i + 1).name).to.be.equal(testData[i]);
+    }
   });
 });
