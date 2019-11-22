@@ -16,7 +16,7 @@ describe('Test user service', () => {
 
   it('Test adding user function of user service', async () => {
     expect(userService).not.to.be.undefined;
-    expect(userService.userList.length).to.be.equal(2);
+    expect(userService.userList.length).to.be.equal(testData.length);
 
     for(let i = 0; i < testData.length; i++) {
       expect(userService.userList[i].id).to.be.equal(i + 1);
@@ -26,7 +26,7 @@ describe('Test user service', () => {
 
   it('Test getting user by id function of user service', async () => {
     expect(userService).not.to.be.undefined;
-    expect(userService.userList.length).to.be.equal(2);
+    expect(userService.userList.length).to.be.equal(testData.length);
 
     for(let i = 0; i < testData.length; i++) {
       expect(userService.getUserById(i + 1)).not.to.be.undefined;
