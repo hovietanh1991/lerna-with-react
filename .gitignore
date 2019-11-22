@@ -8,6 +8,10 @@
 package-lock.json
 */package-lock.json
 
+/build
+**/build
+**/**/build
+
 *.log*
 *xml
 *iml

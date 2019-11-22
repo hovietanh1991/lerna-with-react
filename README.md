@@ -12,21 +12,22 @@ Pre-installation of ```node``` and ```npm```.
 
 ---
 
-### 2. Installation
-Install all packages: ```npm install``` in project's root folder.
-
-Link together local packages and npm install remaining package dependencies: 
-```npm run build``` in project's root folder.
-
+### 2. Build
+Install all packages: ```npm run build``` in project's root folder.
 
 ---
 
-### 3. TEST
+### 3. Test
+
+Before testing, please build the project as in section 2.
 
 Run ```npm run test``` in project's root folder.
 
 ---
 
-### 4. Deploy
+### 4. Start (for dev)
 
 Run ```npm run start``` in project's root folder.
+
+The deploy stage includes already build and test stage
+ (no need to execute ```npm run build``` or ```npm run test```).
