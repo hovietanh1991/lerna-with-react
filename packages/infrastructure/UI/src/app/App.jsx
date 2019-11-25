@@ -1,6 +1,6 @@
 import React from 'react';
-import * as Initiator from '../../../node_modules/app-core/app-services/Initiator.js';
-import * as UserService from '../../../node_modules/app-core/domain-services/UserService.js';
+import * as Initiator from '../../../node_modules/app-core/app-service/Initiator.js';
+import * as UserService from '../../../node_modules/app-core/domain-service/UserService.js';
 
 class App extends React.Component{
   render() {

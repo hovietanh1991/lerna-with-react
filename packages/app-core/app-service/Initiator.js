@@ -1,4 +1,4 @@
-const {userService} = require('../domain-services/UserService');
+const {userService} = require('../domain-service/UserService');
 
 class UserInitiator {
   loadUserFromServer() {
