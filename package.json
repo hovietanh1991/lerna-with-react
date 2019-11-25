@@ -3,8 +3,8 @@
     "lerna": "3.19.0"
   },
   "scripts": {
-    "start": "npm run build && npm run test && ./node_modules/.bin/lerna run start --loglevel debug",
-    "build": "npm install && ./node_modules/.bin/lerna bootstrap && ./node_modules/.bin/lerna run build --loglevel debug",
-    "test": "./node_modules/.bin/lerna run test --loglevel debug"
+    "start": "npm run build && npm run test && lerna run start --loglevel debug",
+    "build": "npm install && lerna bootstrap && lerna run build --loglevel debug",
+    "test": "lerna run test --loglevel debug"
   }
 }
