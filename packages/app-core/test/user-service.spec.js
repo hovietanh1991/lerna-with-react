@@ -1,6 +1,6 @@
 const {describe, it} = require('mocha');
 const { expect } = require('chai');
-const {userService} = require('../services/UserService');
+const {userService} = require('../domain-services/UserService');
 
 
 describe('Test user service', () => {

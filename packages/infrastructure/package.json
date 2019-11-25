@@ -9,7 +9,7 @@
     "test": "npm --prefix UI run test"
   },
   "dependencies": {
-    "domain": "1.0.0"
+    "app-core": "1.0.0"
   },
   "keywords": [],
   "author": "",

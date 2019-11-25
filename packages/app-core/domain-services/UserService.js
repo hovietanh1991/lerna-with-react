@@ -1,4 +1,4 @@
-const {User} = require('../models/User');
+const {User} = require('../domain-models/User');
 
 class UserService {
   constructor() {
