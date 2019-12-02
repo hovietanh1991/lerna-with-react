@@ -4,7 +4,8 @@
   },
   "scripts": {
     "start": "npm run build && npm run test && lerna run start --loglevel debug",
-    "build": "npm install && lerna bootstrap && lerna run build --loglevel debug",
-    "test": "lerna run test --loglevel debug"
+    "build": "lerna bootstrap && lerna run build --loglevel debug",
+    "test": "lerna run test --loglevel debug",
+    "clean": "lerna clean"
   }
 }
